@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Nav Type 2</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="hamburger menu example">
+        <meta name="viewport" content="width=device-width, intital-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="nav">
+
+            <a class="hamburger-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>
+            </a>
+
+            <div class="mobile-nav">
+                <li><a href="#" class="xbtn">X</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+            </div>
+
+            <script>
+
+                let burger = document.querySelector('.hamburger-icon');
+                let xbtn = document.querySelector('.xbtn');
+                let mobileNav = document.querySelector('.mobile-nav');
+    
+                // This is the arrow function to open the nav bar
+    
+                burger.addEventListener('click', openBnav);
+    
+                function openBnav() {
+                    mobileNav.style.width='100vw';
+                };
+    
+                // Arrow function to close the sidebar
+    
+                xbtn.addEventListener('click',closeBnav);
+    
+                function closeBnav() {
+                    mobileNav.style.width='0vw';
+                };
+                
+            </script>
+    
+        </div>
+    </body>
+</html>
